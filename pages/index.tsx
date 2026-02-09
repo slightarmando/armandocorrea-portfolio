@@ -5,7 +5,7 @@ import { resolveNotionPage } from '@/lib/resolve-notion-page'
 
 export const getStaticProps = async () => {
   try {
-    const props = await resolveNotionPage(domain, rootNotionPageId)
+    const props = await resolveNotionPage(domain)
 
     return { props, revalidate: 10 }
   } catch (err) {
